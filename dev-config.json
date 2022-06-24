@@ -14,9 +14,6 @@
             "apiVersion": "2021-11-01-preview",
             "name": "[concat(parameters('vaults_kvpactbunkley_name'), '/test')]",
             "location": "eastus",
-            "dependsOn": [
-                "[resourceId('Microsoft.KeyVault/vaults', parameters('vaults_kvpactbunkley_name'))]"
-            ],
             "properties": {
                 "attributes": {
                     "enabled": true
