@@ -1,25 +1,27 @@
 {
   "$schema": "https://schema.management.azure.com/schemas/2019-04-01/deploymentTemplate.json#",
   "contentVersion": "1.0.0.0",
-    "parameters": {
-        "vaults_kvpactbunkley_name": {
-            "defaultValue": "kvpactbunkley",
-            "type": "String"
-        }
-    },
-    "variables": {},
-    "resources": [
-            {
-            "type": "Microsoft.KeyVault/vaults/secrets",
-            "apiVersion": "2021-11-01-preview",
-            "name": "[concat(parameters('vaults_kvpactbunkley_name'), '/test')]",
-            "location": "eastus",
-            "properties": {
-                "attributes": {
-                    "enabled": true
-                }
-            }
-        }
-    ],
-    "outputs": {}
+  "parameters": {
+    "vaults_kvpactbunkley_name": {
+      "defaultValue": "kvpactbunkley",
+      "type": "String"
+    }
+  },
+  "variables": {},
+  "resources": [
+    {
+      "type": "Microsoft.KeyVault/vaults/secrets",
+      "apiVersion": "2021-11-01-preview",
+      "name": "[concat(parameters('vaults_kvpactbunkley_name'), '/test')]",
+      "location": "eastus",
+      "properties": {
+        "attributes": {
+          "enabled": true
+        },
+        "contentType": "string",
+        "value": "Hello!"
+      }
+    }
+  ],
+  "outputs": {}
 }
