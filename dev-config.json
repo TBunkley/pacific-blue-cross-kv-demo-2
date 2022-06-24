@@ -4,7 +4,7 @@
   "parameters": {
     "vaults_kvpactbunkley_name": {
       "defaultValue": "kvpactbunkley",
-      "type": "String"
+      "type": "string"
     }
   },
   "variables": {},
@@ -12,7 +12,7 @@
     {
       "type": "Microsoft.KeyVault/vaults/secrets",
       "apiVersion": "2021-11-01-preview",
-      "name": "[concat(parameters('vaults_kvpactbunkley_name'), '/terrence')]",
+      "name": "kvpactbunkley/terrence",
       "location": "eastus",
       "properties": {
         "attributes": {
